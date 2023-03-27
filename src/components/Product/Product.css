@@ -42,3 +42,8 @@
   position: absolute;
   bottom: 0;
 }
+
+.cart-btn:hover {
+ 
+    background-color: orange;
+}
