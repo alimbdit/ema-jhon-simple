@@ -12,11 +12,14 @@ import Orders from './components/Orders/Orders';
 import Inventory from './components/Inventory/Inventory';
 import Login from './components/Login/Login';
 import cartProductsLoader from './loaders/cartProductsLoader';
+import Checkout from './components/Checkout/Checkout';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home></Home>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -26,6 +29,10 @@ const router = createBrowserRouter([
         path: '/orders',
         element: <Orders></Orders>,
         loader: cartProductsLoader,
+      },
+      {
+        path: '/checkout',
+        element:<Checkout></Checkout>,
       },
       {
         path: '/inventory',

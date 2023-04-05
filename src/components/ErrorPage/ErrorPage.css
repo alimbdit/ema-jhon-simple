@@ -1,0 +1,14 @@
+
+.error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-page{
+    width: 100%;
+    height: calc(100vh - 10px);
+    
+    
+    
+    /* margin: 0; */
+}
