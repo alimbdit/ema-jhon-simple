@@ -1,0 +1,20 @@
+.toggle-way {
+    text-align: center;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.0025em;
+  color: #2a414f;
+}
+
+.toggle-way a {
+    color: #FF9900;
+}
+.toggle-way a:hover {
+    color: #cc7a00;
+}
+
+.text-error{
+    color: rgb(252, 38, 38);
+    
+}
+
