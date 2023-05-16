@@ -13,6 +13,7 @@ import Checkout from "./components/Checkout/Checkout";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import SignUp from "./components/SignUp/SignUp";
 import AuthProvider from "./providers/AuthProvider";
+import PrivateRoute from "./routes/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Shop></Shop>,
+        loader: () => fetch("http://localhost:5000/totalProducts"),
       },
       {
         path: "/orders",
@@ -31,11 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/checkout",
-        element: <Checkout></Checkout>,
+        element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
       },
       {
         path: "/inventory",
-        element: <Inventory></Inventory>,
+        element: <PrivateRoute><Inventory></Inventory></PrivateRoute>,
       },
       {
         path: "/login",
